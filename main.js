@@ -470,7 +470,7 @@ function TeakCalculate()
         return;
     }
 
-    var EFTeak = 0.47;
+    var EFTeak = 470;
 
     var resultTeak = inputTeak * EFTeak;
 
@@ -487,7 +487,7 @@ function EucalyptusCalculate()
         return;
     }
 
-    var EFEucalyptus = 1.30;
+    var EFEucalyptus = 1300;
 
     var resultEucalyptus = inputEucalyptus * EFEucalyptus;
 
@@ -504,7 +504,7 @@ function ThephaAcaciaCalculate()
         return;
     }
 
-    var EFThephaAcacia = 1.20;
+    var EFThephaAcacia = 1200;
 
     var resultThephaAcacia = inputThephaAcacia * EFThephaAcacia;
 
@@ -521,7 +521,7 @@ function AcaciaNarongCalculate()
         return;
     }
 
-    var EFAcaciaNarong = 1.20;
+    var EFAcaciaNarong = 1200;
 
     var resultAcaciaNarong = inputAcaciaNarong * EFAcaciaNarong;
 
@@ -538,7 +538,7 @@ function GiantAcaciaCalculate()
         return;
     }
 
-    var EFGiantAcacia = 1.31;
+    var EFGiantAcacia = 1310;
 
     var resultGiantAcacia = inputGiantAcacia * EFGiantAcacia;
 
@@ -555,7 +555,7 @@ function MangroveCalculate()
         return;
     }
 
-    var EFMangrove = 0.75;
+    var EFMangrove = 750;
 
     var resultMangrove = inputMangrove * EFMangrove;
 
@@ -572,7 +572,7 @@ function RubberCalculate()
         return;
     }
 
-    var EFRubber = 1.15;
+    var EFRubber = 1150;
 
     var resultRubber = inputRubber * EFRubber;
 
@@ -589,7 +589,7 @@ function OilpalmCalculate()
         return;
     }
 
-    var EFOilpalm = 0.68;
+    var EFOilpalm = 680;
 
     var resultOilpalm = inputOilpalm * EFOilpalm;
 
@@ -606,7 +606,7 @@ function NativePlantsGrowSlowlyCalculate()
         return;
     }
 
-    var EFNativePlantsGrowSlowly = 0.26;
+    var EFNativePlantsGrowSlowly = 260;
 
     var resultNativePlantsGrowSlowly = inputNativePlantsGrowSlowly * EFNativePlantsGrowSlowly;
 
@@ -623,7 +623,7 @@ function MultipurposePlantsCalculate()
         return;
     }
 
-    var EFMultipurposePlants = 0.40;
+    var EFMultipurposePlants = 400;
 
     var resultMultipurposePlants = inputMultipurposePlants * EFMultipurposePlants;
 
@@ -640,7 +640,7 @@ function PlantsGrownInTheCityCalculate()
         return;
     }
 
-    var EFPlantsGrownInTheCity = 0.33;
+    var EFPlantsGrownInTheCity = 330;
 
     var resultPlantsGrownInTheCity = inputPlantsGrownInTheCity * EFPlantsGrownInTheCity;
 
@@ -682,6 +682,44 @@ function CalculateAll2()
 
     // Call a function to draw the pie chart using the collected data
     drawBarChart(barChartData);
+}
+function combineResults() {
+    // Get the individual result values
+    var resultMotherCow = parseFloat(document.getElementById('resultMotherCow').innerHTML);
+    var resultYoungCow = parseFloat(document.getElementById('resultYoungCow').innerHTML);
+    var resultBabyCow = parseFloat(document.getElementById('resultBabyCow').innerHTML);
+    var resultPetrol = parseFloat(document.getElementById('resultPetrol').innerHTML);
+    var resultDiesel = parseFloat(document.getElementById('resultDiesel').innerHTML);
+    var resultPremix = parseFloat(document.getElementById('resultPremix').innerHTML);
+    var resultMineralsAndVitaminsPremix = parseFloat(document.getElementById('resultMineralsAndVitaminsPremix').innerHTML);
+    var inputRuziGrass = parseFloat(document.getElementById('inputRuziGrass').innerHTML);
+    var inputPangolaGrass = parseFloat( document.getElementById('inputPangolaGrass').innerHTML);
+    var inputNapierGrass = parseFloat( document.getElementById('inputNapierGrass').innerHTML);
+    var inputNapierGrassinBag = parseFloat( document.getElementById('inputNapierGrassinBag').innerHTML);
+    var inputGuineaGrass = parseFloat( document.getElementById('inputGuineaGrass').innerHTML);
+    var inputGuineaGrassifDry = parseFloat( document.getElementById('inputGuineaGrassifDry').innerHTML);
+    var inputGuineaGrassinSilo = parseFloat( document.getElementById('inputGuineaGrassinSilo').innerHTML);
+    var inputThirtyFiveHP = parseFloat( document.getElementById('inputThirtyFiveHP').innerHTML);
+    var inputFortyFiveHP = parseFloat( document.getElementById('inputFortyFiveHP').innerHTML);
+    var inputSeventyHP = parseFloat( document.getElementById('inputSeventyHP').innerHTML);
+    var inputEightyHP = parseFloat( document.getElementById('inputEightyHP').innerHTML);
+    var inputNinetyHP = parseFloat( document.getElementById('inputNinetyHP').innerHTML);
+    var inputEighteenwithPetrol = parseFloat( document.getElementById('inputEighteenwithPetrol').innerHTML);
+    var inputEighteenwithDiesel = parseFloat( document.getElementById('inputEighteenwithDiesel').innerHTML);
+    var inputElectricity = parseFloat( document.getAnimations('inputElectricity').innerHTML);
+
+    // Combine the results
+    var combinedResult = resultMotherCow + resultYoungCow 
+    + resultBabyCow + resultPetrol + resultDiesel
+    + resultPremix + resultMineralsAndVitaminsPremix + inputRuziGrass
+    + inputPangolaGrass + inputNapierGrass + inputNapierGrassinBag
+    + inputGuineaGrass + inputGuineaGrassifDry + inputGuineaGrassinSilo
+    + inputThirtyFiveHP + inputFortyFiveHP + inputSeventyHP
+    + inputEightyHP + inputNinetyHP + inputEighteenwithPetrol
+    + inputEighteenwithDiesel + inputElectricity;
+
+    // Display the combined result
+    document.getElementById('resultAll').innerHTML = combinedResult.toFixed(4);
 }
 // Declare myPieChart variable in the outer scope
 var myPieChart;
