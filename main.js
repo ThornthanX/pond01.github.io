@@ -471,7 +471,7 @@ function TeakCalculate()
         return;
     }
 
-    var EFTeak = 470;
+    var EFTeak = 39.17;
 
     var resultTeak = inputTeak * EFTeak;
 
@@ -488,7 +488,7 @@ function EucalyptusCalculate()
         return;
     }
 
-    var EFEucalyptus = 1300;
+    var EFEucalyptus = 108.33;
 
     var resultEucalyptus = inputEucalyptus * EFEucalyptus;
 
@@ -505,7 +505,7 @@ function ThephaAcaciaCalculate()
         return;
     }
 
-    var EFThephaAcacia = 1200;
+    var EFThephaAcacia = 100;
 
     var resultThephaAcacia = inputThephaAcacia * EFThephaAcacia;
 
@@ -522,7 +522,7 @@ function AcaciaNarongCalculate()
         return;
     }
 
-    var EFAcaciaNarong = 1200;
+    var EFAcaciaNarong = 79.17;
 
     var resultAcaciaNarong = inputAcaciaNarong * EFAcaciaNarong;
 
@@ -539,7 +539,7 @@ function GiantAcaciaCalculate()
         return;
     }
 
-    var EFGiantAcacia = 1310;
+    var EFGiantAcacia = 109.17;
 
     var resultGiantAcacia = inputGiantAcacia * EFGiantAcacia;
 
@@ -556,7 +556,7 @@ function MangroveCalculate()
         return;
     }
 
-    var EFMangrove = 750;
+    var EFMangrove = 62.5;
 
     var resultMangrove = inputMangrove * EFMangrove;
 
@@ -573,7 +573,7 @@ function RubberCalculate()
         return;
     }
 
-    var EFRubber = 1150;
+    var EFRubber = 95.83;
 
     var resultRubber = inputRubber * EFRubber;
 
@@ -590,7 +590,7 @@ function OilpalmCalculate()
         return;
     }
 
-    var EFOilpalm = 680;
+    var EFOilpalm = 56.67 ;
 
     var resultOilpalm = inputOilpalm * EFOilpalm;
 
@@ -607,7 +607,7 @@ function NativePlantsGrowSlowlyCalculate()
         return;
     }
 
-    var EFNativePlantsGrowSlowly = 260;
+    var EFNativePlantsGrowSlowly = 21.67;
 
     var resultNativePlantsGrowSlowly = inputNativePlantsGrowSlowly * EFNativePlantsGrowSlowly;
 
@@ -624,7 +624,7 @@ function MultipurposePlantsCalculate()
         return;
     }
 
-    var EFMultipurposePlants = 400;
+    var EFMultipurposePlants = 33.33;
 
     var resultMultipurposePlants = inputMultipurposePlants * EFMultipurposePlants;
 
@@ -641,7 +641,7 @@ function PlantsGrownInTheCityCalculate()
         return;
     }
 
-    var EFPlantsGrownInTheCity = 330;
+    var EFPlantsGrownInTheCity = 27.5;
 
     var resultPlantsGrownInTheCity = inputPlantsGrownInTheCity * EFPlantsGrownInTheCity;
 
