@@ -378,6 +378,44 @@ function ElectricityCalculate()
 
     document.getElementById('resultElectricity').innerHTML = roundedresultElectricity;
 }
+function combineResults() {
+    // Get the individual result values
+    var resultMotherCow = parseFloat(document.getElementById('resultMotherCow').innerHTML);
+    var resultYoungCow = parseFloat(document.getElementById('resultYoungCow').innerHTML);
+    var resultBabyCow = parseFloat(document.getElementById('resultBabyCow').innerHTML);
+    var resultPetrol = parseFloat(document.getElementById('resultPetrol').innerHTML);
+    var resultDiesel = parseFloat(document.getElementById('resultDiesel').innerHTML);
+    var resultPremix = parseFloat(document.getElementById('resultPremix').innerHTML);
+    var resultMineralsAndVitaminsPremix = parseFloat(document.getElementById('resultMineralsAndVitaminsPremix').innerHTML);
+    var inputRuziGrass = parseFloat(document.getElementById('inputRuziGrass').innerHTML);
+    var inputPangolaGrass = parseFloat( document.getElementById('inputPangolaGrass').innerHTML);
+    var inputNapierGrass = parseFloat( document.getElementById('inputNapierGrass').innerHTML);
+    var inputNapierGrassinBag = parseFloat( document.getElementById('inputNapierGrassinBag').innerHTML);
+    var inputGuineaGrass = parseFloat( document.getElementById('inputGuineaGrass').innerHTML);
+    var inputGuineaGrassifDry = parseFloat( document.getElementById('inputGuineaGrassifDry').innerHTML);
+    var inputGuineaGrassinSilo = parseFloat( document.getElementById('inputGuineaGrassinSilo').innerHTML);
+    var inputThirtyFiveHP = parseFloat( document.getElementById('inputThirtyFiveHP').innerHTML);
+    var inputFortyFiveHP = parseFloat( document.getElementById('inputFortyFiveHP').innerHTML);
+    var inputSeventyHP = parseFloat( document.getElementById('inputSeventyHP').innerHTML);
+    var inputEightyHP = parseFloat( document.getElementById('inputEightyHP').innerHTML);
+    var inputNinetyHP = parseFloat( document.getElementById('inputNinetyHP').innerHTML);
+    var inputEighteenwithPetrol = parseFloat( document.getElementById('inputEighteenwithPetrol').innerHTML);
+    var inputEighteenwithDiesel = parseFloat( document.getElementById('inputEighteenwithDiesel').innerHTML);
+    var inputElectricity = parseFloat( document.getAnimations('inputElectricity').innerHTML);
+
+    // Combine the results
+    var combinedResult = resultMotherCow + resultYoungCow 
+    + resultBabyCow + resultPetrol + resultDiesel
+    + resultPremix + resultMineralsAndVitaminsPremix + inputRuziGrass
+    + inputPangolaGrass + inputNapierGrass + inputNapierGrassinBag
+    + inputGuineaGrass + inputGuineaGrassifDry + inputGuineaGrassinSilo
+    + inputThirtyFiveHP + inputFortyFiveHP + inputSeventyHP
+    + inputEightyHP + inputNinetyHP + inputEighteenwithPetrol
+    + inputEighteenwithDiesel + inputElectricity;
+
+    // Display the combined result
+    document.getElementById('resultAll').innerHTML = combinedResult.toFixed(4);
+}
 function CalculateAll1(){
     // calculate all function
     MotherCowCalculate();
@@ -402,6 +440,7 @@ function CalculateAll1(){
     EighteenwithPetrolCalculate();
     EighteenwithDieselCalculate();
     ElectricityCalculate();
+    combineResults();
 
     // Collect data for the pie chart
     var pieChartData =
@@ -682,44 +721,6 @@ function CalculateAll2()
 
     // Call a function to draw the pie chart using the collected data
     drawBarChart(barChartData);
-}
-function combineResults() {
-    // Get the individual result values
-    var resultMotherCow = parseFloat(document.getElementById('resultMotherCow').innerHTML);
-    var resultYoungCow = parseFloat(document.getElementById('resultYoungCow').innerHTML);
-    var resultBabyCow = parseFloat(document.getElementById('resultBabyCow').innerHTML);
-    var resultPetrol = parseFloat(document.getElementById('resultPetrol').innerHTML);
-    var resultDiesel = parseFloat(document.getElementById('resultDiesel').innerHTML);
-    var resultPremix = parseFloat(document.getElementById('resultPremix').innerHTML);
-    var resultMineralsAndVitaminsPremix = parseFloat(document.getElementById('resultMineralsAndVitaminsPremix').innerHTML);
-    var inputRuziGrass = parseFloat(document.getElementById('inputRuziGrass').innerHTML);
-    var inputPangolaGrass = parseFloat( document.getElementById('inputPangolaGrass').innerHTML);
-    var inputNapierGrass = parseFloat( document.getElementById('inputNapierGrass').innerHTML);
-    var inputNapierGrassinBag = parseFloat( document.getElementById('inputNapierGrassinBag').innerHTML);
-    var inputGuineaGrass = parseFloat( document.getElementById('inputGuineaGrass').innerHTML);
-    var inputGuineaGrassifDry = parseFloat( document.getElementById('inputGuineaGrassifDry').innerHTML);
-    var inputGuineaGrassinSilo = parseFloat( document.getElementById('inputGuineaGrassinSilo').innerHTML);
-    var inputThirtyFiveHP = parseFloat( document.getElementById('inputThirtyFiveHP').innerHTML);
-    var inputFortyFiveHP = parseFloat( document.getElementById('inputFortyFiveHP').innerHTML);
-    var inputSeventyHP = parseFloat( document.getElementById('inputSeventyHP').innerHTML);
-    var inputEightyHP = parseFloat( document.getElementById('inputEightyHP').innerHTML);
-    var inputNinetyHP = parseFloat( document.getElementById('inputNinetyHP').innerHTML);
-    var inputEighteenwithPetrol = parseFloat( document.getElementById('inputEighteenwithPetrol').innerHTML);
-    var inputEighteenwithDiesel = parseFloat( document.getElementById('inputEighteenwithDiesel').innerHTML);
-    var inputElectricity = parseFloat( document.getAnimations('inputElectricity').innerHTML);
-
-    // Combine the results
-    var combinedResult = resultMotherCow + resultYoungCow 
-    + resultBabyCow + resultPetrol + resultDiesel
-    + resultPremix + resultMineralsAndVitaminsPremix + inputRuziGrass
-    + inputPangolaGrass + inputNapierGrass + inputNapierGrassinBag
-    + inputGuineaGrass + inputGuineaGrassifDry + inputGuineaGrassinSilo
-    + inputThirtyFiveHP + inputFortyFiveHP + inputSeventyHP
-    + inputEightyHP + inputNinetyHP + inputEighteenwithPetrol
-    + inputEighteenwithDiesel + inputElectricity;
-
-    // Display the combined result
-    document.getElementById('resultAll').innerHTML = combinedResult.toFixed(4);
 }
 // Declare myPieChart variable in the outer scope
 var myPieChart;
