@@ -33,13 +33,13 @@
                                     <button class="nav-link active" id="calculate-tab" data-bs-toggle="tab" data-bs-target="#calculate-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">คำนวณ</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">ผลลัพท์</button>
+                                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">ภาพรวม</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="zerocarbon-tab" data-bs-toggle="tab" data-bs-target="#zerocarbon-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Carbon Credit</button>
+                                    <button class="nav-link" id="zerocarbon-tab" data-bs-toggle="tab" data-bs-target="#zerocarbon-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Zero carbon</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">เกี่ยวกับBEEFBON</button>
+                                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">อ้างอิง</button>
                                 </li>
                             </ul>
                             <div class="tab-content border" id="myTabContent">
@@ -48,7 +48,6 @@
                                     <div class="container">
                                         <div class="text-center mt-2">
                                             ข้อมูลกิจกรรม (คิดในขอบเขตในฟาร์มเท่านั้น)
-                                            </br><div class="red-text">”ค่า emission factor ที่นำมาคำนวณอ้างอิงมาจากองค์การบริหารจัดการก๊าซเรือนกระจก (องค์กรมหาชน) หรือ อบก. update ล่าสุด กรกฎาคม 2565”</div>
                                         </div>
                                         <table class="table mt-2 table-bordered text-center">
                                             <thead>
@@ -65,17 +64,17 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>1.1.โคเต็มวัย(มากกว่า12เดือน)</td>
+                                                    <td>1.1.แม่วัว(400KG/เฉลี่ย/ตัว)</td>
                                                     <td><input type="number" class="form-control" id="inputMotherCow"></td>
                                                     <td><output class="form-control" id="resultMotherCow">0.0000</output></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>1.2.โครุ่น(6เดือน-12เดือน)</td>
+                                                    <td>1.2.วัวรุ่น(250KG/เฉลี่ย/ตัว)</td>
                                                     <td><input type="number" class="form-control" id="inputYoungCow"></td>
                                                     <td><output class="form-control" id="resultYoungCow">0.0000</output></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>1.3.ลูกโค(ไม่เกิน6เดือน)</td>
+                                                    <td>1.3.ลูกวัว(112.5KG/เฉลี่ย/ตัว)</td>
                                                     <td><input type="number" class="form-control" id="inputBabyCow"></td>
                                                     <td><output class="form-control" id="resultBabyCow">0.0000</output></td>
                                                 </tr>
@@ -193,7 +192,6 @@
                                                     <td>5.1.ค่าไฟ(หน่วย)</td>
                                                     <td><input type="number" class="form-control" id="inputElectricity"></td>
                                                     <td><output class="form-control" id="resultElectricity">0.0000</output></td>
-                                                </tr>
                                                 <tr>
                                                     <td colspan="3">
                                                         <button type="button" class="btn btn-success" onclick="CalculateAll1()">คำนวณ</button>
@@ -224,7 +222,7 @@
                                     <table class="table mt-2 table-bordered text-center">
                                         <thead>
                                             <tr>
-                                                <th scope="col">ต้นไม้</br>*คือชนิดไม้ที่องค์การบริหารจัดการก๊าซเรือนกระจก (องค์กรมหาชน) หรือ อบก.ไม่รับรองในการคำนวณ carbon credit</th>
+                                                <th scope="col">ต้นไม้</th>
                                                 <th scope="col">จำนวน(ไร่)</th>
                                                 <th scope="col">ผลลัพท์ (kqCO2e/ปี)</th>
                                             </tr>
@@ -236,7 +234,7 @@
                                                 <td><output class="form-control" id="resultTeak">0.0000</output></td>
                                             </tr>
                                             <tr>
-                                                <td>2.ยูคาลิปตัส<div class="red-text">*</div></td>
+                                                <td>2.ยูคาลิปตัส</td>
                                                 <td><input type="number" class="form-control" id="inputEucalyptus"></td>
                                                 <td><output class="form-control" id="resultEucalyptus">0.0000</output></td>
                                             </tr>
@@ -261,7 +259,7 @@
                                                 <td><output class="form-control" id="resultMangrove">0.0000</output></td>
                                             </tr>
                                             <tr>
-                                                <td>7.ยางพารา<div class="red-text">*</div></td>
+                                                <td>7.ยางพารา</td>
                                                 <td><input type="number" class="form-control" id="inputRubber"></td>
                                                 <td><output class="form-control" id="resultRubber">0.0000</output></td>
                                             </tr>
@@ -294,11 +292,7 @@
                                         </tbody>
                                     </table>
                                 </div> <!-- เคลียตารางลดคาร์บอน เพิ่มAds -->
-                                <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab">
-                                    “เว็บไซต์นี้เป็นนวัตกรรมที่คิดขึ้นมาจากค่ายนักคิดพิชิตนวัตกรรม ครั้งที่ 3 ของมหาวิทยาลัยเกษตร์ศาสตร์” 
-                                    จุดประสงค์ : เพื่อช่วยเหลือเกษตรกรรายย่อยหรือฟาร์มโคเนื้อขนาดเล็กและขนาดกลางในการคำนวณปริมาณการปล่อยคาร์บอนไดออกไซด์ และวิธีการลดการดูดซับคาร์บอนไดออกไซด์ภายในฟาร์มโคเนื้อให้มีเนื้อหาที่เข้าใจง่ายรวมถึงรวบรวมข้อมูลที่มีความจำเป็น เพื่อรับมือและป้องกันการกีดกันทางการค้าเกี่ยวกับการปล่อยก๊าซเรือนกระจกรวมที่ส่งผลต่อภาวะโลกร้อนในฟาร์มโคเนื้อ
-                                    อ้างอิงข้อมูล https://thaicarbonlabel.tgo.or.th/tools/files.php?mod=Y0hKdlpIVmpkSE5mWlcxcGMzTnBiMjQ9&type=WDBaSlRFVlQ&files=Tnc9PQ 
-                                </div>
+                                <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab">ห้าหกเจ็ดแปด</div>
                             </div>
                         </div>
                     </div>
