@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+    <head>
+        <!-- Meta tags -->
+        <meta charset="utf-8">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Web page title and additional files -->
+        <title>Beefbon</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2 mx-auto">
+                    <div class="ad-frame">
+                        Left Ad Content
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <div class="forheat">
+                                <img src="Beefbon_logo.png" alt="Logo">
+                                <h1>BeefbonHome</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <!-- Top maun -->
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="calculate-tab" data-bs-toggle="tab" data-bs-target="#calculate-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">คำนวณ</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">ภาพรวม</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="zerocarbon-tab" data-bs-toggle="tab" data-bs-target="#zerocarbon-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Zero carbon</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">อ้างอิง</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content border" id="myTabContent">
+                                <div class="tab-pane fade show active" id="calculate-tab-pane" role="tabpanel" aria-labelledby="calculate-tab">
+                                    <!-- CowCalculate maun -->
+                                    <div class="container">
+                                        <div class="text-center mt-2">
+                                            ข้อมูลกิจกรรม (คิดในขอบเขตในฟาร์มเท่านั้น)
+                                        </div>
+                                        <table class="table mt-2 table-bordered text-center">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">กิจกรรม</th>
+                                                    <th scope="col">จำนวน</th>
+                                                    <th scope="col">ผลลัพท์ (kqCO2e)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="3">
+                                                        1.วัว
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1.1.แม่วัว(400KG/เฉลี่ย/ตัว)</td>
+                                                    <td><input type="number" class="form-control" id="inputMotherCow"></td>
+                                                    <td><output class="form-control" id="resultMotherCow">0.0000</output></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1.2.วัวรุ่น(250KG/เฉลี่ย/ตัว)</td>
+                                                    <td><input type="number" class="form-control" id="inputYoungCow"></td>
+                                                    <td><output class="form-control" id="resultYoungCow">0.0000</output></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1.3.ลูกวัว(112.5KG/เฉลี่ย/ตัว)</td>
+                                                    <td><input type="number" class="form-control" id="inputBabyCow"></td>
+                                                    <td><output class="form-control" id="resultBabyCow">0.0000</output></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3">
+                                                        2.กลุ่มปิโตรเคมี
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2.1.เบนซิน(ลิตร)</td>
+                                                    <td><input type="number" class="form-control" id="inputPetrol"></td>
+                                                    <td><output class="form-control" id="resultPetrol">0.0000</output></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2.2.ดีเซล(ลิตร)</td>
+                                                    <td><input type="number" class="form-control" id="inputDiesel"></td>
+                                                    <td><output class="form-control" id="resultDiesel">0.0000</output></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="4">
+                                                        3.กลุ่มอาหารสัตว์
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3.1.แร่ธาตุพรีมิกซ์(Kg)</td>
+                                                    <td><input type="number" class="form-control" id="inputPremix"></td>
+                                                    <td><output class="form-control" id="resultPremix">0.0000</output></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3.2.แร่ธาตุและวิตามินพรีมิกซ์(Kg)</td>
+                                                    <td><input type="number" class="form-control" id="inputMineralsAndVitaminsPremix"></td>
+                                                    <td><output class="form-control" id="resultMineralsAndVitaminsPremix">0.0000</output></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3.3.หญ้ารูซี่สด(Kg)</td>
+                                                    <td><input type="number" class="form-control" id="inputRuziGrass"></td>
+                                                    <td><output class="form-control" id="resultRuziGrass">0.0000</output></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3.4.หญ้าแพงโกล่าสด(Kg)</td>
+                                                    <td><input type="number" class="form-control" id="inputPangolaGrass"></td>
+                                                    <td><output class="form-control" id="resultPangolaGrass">0.0000</output></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3.5.หญ้าเนเปียร์สด(Kg)</td>
+                                                    <td><input type="number" class="form-control" id="inputNapierGrass"></td>
+                                                    <td><output class="form-control" id="resultNapierGrass">0.0000</output></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3.6.หญ้าเนเปียร์ หมักด้วยถุงพลาสติก(Kg)</td>
+                                                    <td><input type="number" class="form-control" id="inputNapierGrassinBag"></td>
+                                                    <td><output class="form-control" id="resultNapierGrassinBag">0.0000</output></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3.7.หญ้ากินนีสด(Kg)</td>
+                                                    <td><input type="number" class="form-control" id="inputGuineaGrass"></td>
+                                                    <td><output class="form-control" id="resultGuineaGrass">0.0000</output></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3.8.หญ้ากินนีแห้ง (ความชื้น 10%)(Kg)</td>
+                                                    <td><input type="number" class="form-control" id="inputGuineaGrassifDry"></td>
+                                                    <td><output class="form-control" id="resultGuineaGrassifDry">0.0000</output></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3.9.หญ้ากินนี หมักด้วยไซโล(Kg)</td>
+                                                    <td><input type="number" class="form-control" id="inputGuineaGrassinSilo"></td>
+                                                    <td><output class="form-control" id="resultGuineaGrassinSilo">0.0000</output></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="4">
+                                                        4.กลุ่มเครื่องจักร
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4.1.รถแทรกเตอร์สี่ล้อขนาด 35 แรงม้า(Hr)</td>
+                                                    <td><input type="number" class="form-control" id="inputThirtyFiveHP"></td>
+                                                    <td><output class="form-control" id="resultThirtyFiveHP">0.0000</output></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4.2.รถแทรกเตอร์สี่ล้อขนาด 45 แรงม้า(Hr)</td>
+                                                    <td><input type="number" class="form-control" id="inputFortyFiveHP"></td>
+                                                    <td><output class="form-control" id="resultFortyFiveHP">0.0000</output></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4.3.รถแทรกเตอร์สี่ล้อขนาด 70 แรงม้า(Hr)</td>
+                                                    <td><input type="number" class="form-control" id="inputSeventyHP"></td>
+                                                    <td><output class="form-control" id="resultSeventyHP">0.0000</output></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4.4.รถแทรกเตอร์สี่ล้อขนาด 80 แรงม้า(Hr)</td>
+                                                    <td><input type="number" class="form-control" id="inputEightyHP"></td>
+                                                    <td><output class="form-control" id="resultEightyHP">0.0000</output></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4.5.รถแทรกเตอร์สี่ล้อขนาด 90 แรงม้า(Hr)</td>
+                                                    <td><input type="number" class="form-control" id="inputNinetyHP"></td>
+                                                    <td><output class="form-control" id="resultNinetyHP">0.0000</output></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4.6.รถแทรกเตอร์สองล้อ <18แรงม้า ขับเคลื่อนด้วยน้ำมันเบนซิน(Hr)</td>
+                                                    <td><input type="number" class="form-control" id="inputEighteenwithPetrol"></td>
+                                                    <td><output class="form-control" id="resultEighteenwithPetrol">0.0000</output></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4.7.รถแทรกเตอร์สองล้อ <18แรงม้า ขับเคลื่อนด้วยน้ำมันดีเซล(Hr)</td>
+                                                    <td><input type="number" class="form-control" id="inputEighteenwithDiesel"></td>
+                                                    <td><output class="form-control" id="resultEighteenwithDiesel">0.0000</output></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="4">
+                                                        5.ไฟฟ้า
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5.1.ค่าไฟ(หน่วย)</td>
+                                                    <td><input type="number" class="form-control" id="inputElectricity"></td>
+                                                    <td><output class="form-control" id="resultElectricity">0.0000</output></td>
+                                                <tr>
+                                                    <td colspan="3">
+                                                        <button type="button" class="btn btn-success" onclick="CalculateAll1()">คำนวณ</button>
+                                                        <button type="button" class="btn btn-danger" onclick="ResetAll()">รีเซ็ต</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div> <!-- ลดขนาดตาราง เพิ่มAds -->
+                                <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab">
+                                    <div class="container">
+                                        <div class="row justify-content-center">
+                                            <div class="col-12">
+                                                <h4>
+                                                    <p class="text-center font-weight-bold">
+                                                        แผนภูมิวงกลม
+                                                    </p>
+                                                </h4>
+                                                <canvas id="myPieChart"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>                            
+                                </div> <!-- ลดขนาดแผนภูมิวงกลม เพิ่มAds -->
+                                <div class="tab-pane fade" id="zerocarbon-tab-pane" role="tabpanel" aria-labelledby="zerocarbon-tab">
+                                    <canvas id="myBarChart"></canvas>
+                                    <br /><br />
+                                    <table class="table mt-2 table-bordered text-center">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">ต้นไม้</th>
+                                                <th scope="col">จำนวน(ไร่)</th>
+                                                <th scope="col">ผลลัพท์ (kqCO2e/ปี)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1.สัก</td>
+                                                <td><input type="number" class="form-control" id="inputTeak"></td>
+                                                <td><output class="form-control" id="resultTeak">0.0000</output></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2.ยูคาลิปตัส</td>
+                                                <td><input type="number" class="form-control" id="inputEucalyptus"></td>
+                                                <td><output class="form-control" id="resultEucalyptus">0.0000</output></td>
+                                            </tr>
+                                            <tr>
+                                                <td>3.กระถินเทพา</td>
+                                                <td><input type="number" class="form-control" id="inputThephaAcacia"></td>
+                                                <td><output class="form-control" id="resultThephaAcacia">0.0000</output></td>
+                                            </tr>
+                                            <tr>
+                                                <td>4.กระถินณรงค์</td>
+                                                <td><input type="number" class="form-control" id="inputAcaciaNarong"></td>
+                                                <td><output class="form-control" id="resultAcaciaNarong">0.0000</output></td>
+                                            </tr>
+                                            <tr>
+                                                <td>5.กระถินยักษ์</td>
+                                                <td><input type="number" class="form-control" id="inputGiantAcacia"></td>
+                                                <td><output class="form-control" id="resultGiantAcacia">0.0000</output></td>
+                                            </tr>
+                                            <tr>
+                                                <td>6.โกงกาง</td>
+                                                <td><input type="number" class="form-control" id="inputMangrove"></td>
+                                                <td><output class="form-control" id="resultMangrove">0.0000</output></td>
+                                            </tr>
+                                            <tr>
+                                                <td>7.ยางพารา</td>
+                                                <td><input type="number" class="form-control" id="inputRubber"></td>
+                                                <td><output class="form-control" id="resultRubber">0.0000</output></td>
+                                            </tr>
+                                            <tr>
+                                                <td>8.ปาล์มน้ำมัน</td>
+                                                <td><input type="number" class="form-control" id="inputOilpalm"></td>
+                                                <td><output class="form-control" id="resultOilpalm">0.0000</output></td>
+                                            </tr>
+                                            <tr>
+                                                <td>9.พรรณไม้พื้นเมืองโตช้า</td>
+                                                <td><input type="number" class="form-control" id="inputNativePlantsGrowSlowly"></td>
+                                                <td><output class="form-control" id="resultNativePlantsGrowSlowly">0.0000</output></td>
+                                            </tr>
+                                            <tr>
+                                                <td>10.พรรณไม้อเนคประสงค์</td>
+                                                <td><input type="number" class="form-control" id="inputMultipurposePlants"></td>
+                                                <td><output class="form-control" id="resultMultipurposePlants">0.0000</output></td>
+                                            </tr>
+                                            <tr>
+                                                <td>11.พรรณไม้ปลุกในเมือง</td>
+                                                <td><input type="number" class="form-control" id="inputPlantsGrownInTheCity"></td>
+                                                <td><output class="form-control" id="resultPlantsGrownInTheCity">0.0000</output></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3">
+                                                    <button type="button" class="btn btn-success" onclick="CalculateAll2()">คำนวณ</button>
+                                                    <button type="button" class="btn btn-danger" onclick="ResetAll()">รีเซ็ต</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div> <!-- เคลียตารางลดคาร์บอน เพิ่มAds -->
+                                <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab">ห้าหกเจ็ดแปด</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2 mx-auto">
+                    <div class="ad-frame">
+                        Right Ad Content
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <!-- Bootstrap,JS,Popper.js,Chart.js and CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js" integrity="sha384-cN7U14m+zE2blA4Zq6f8+n6PXgdPYI3nKtEGt2W6cglFocKKs0Ir1eSNgE1dM1eJ" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="main.css" rel="stylesheet">
+    <script src="main.js"></script>
+</html>

@@ -1,0 +1,41 @@
+html,
+body 
+{
+    height: 100%;
+    padding-top: 30px;
+    background-color: #ffffff;
+}
+.forheat
+{
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+}
+img 
+{
+    max-width: 20%;
+    width: 100%;
+    height: auto;
+    margin-right: 10px; /* Add some margin between the image and the heading */
+}
+div.scrollmenu
+{
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.ad-frame 
+{
+    position: fixed;
+    height: 100%;
+    padding: 15px;
+    background-color: #f8f9fa; /* Adjust the background color as needed */
+    border: 1px solid #dee2e6; /* Adjust the border color as needed */
+}
+@media (max-width: 767px) 
+{
+    .ad-frame 
+    {
+        display: none; /* Hide the ad frame on smaller screens */
+    }
+}
